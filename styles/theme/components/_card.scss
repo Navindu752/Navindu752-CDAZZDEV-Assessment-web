@@ -1,0 +1,32 @@
+//
+// Extended from bootstrap
+//
+// card
+
+
+.card{
+    box-shadow: $smooth-shadow-sm;
+    border: 0px;
+    border-radius: $border-radius-lg;
+}
+
+.border-responsive{
+    border-right: 2px solid $light-secondary;
+    @media (max-width: 767px) {
+        border-right: none;
+        border-bottom: 2px solid $light-secondary;
+    }
+}
+.rotate-block{
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+    padding-top: 0.85em;
+    padding-bottom: 0.85em;
+}
+
+.text-xs{
+    font-size: 0.75em;
+}
