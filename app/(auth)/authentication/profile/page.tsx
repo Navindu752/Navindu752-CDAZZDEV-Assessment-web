@@ -3,14 +3,13 @@
 import { Row, Col, Card, Form, Spinner } from 'react-bootstrap';
 
 // import hooks
-import useMounted from 'hooks/useMounted';
-import { SECONDARY_BLUE } from 'utils/constants';
 import React, { useEffect, useState } from 'react';
-import useAxiosPrivate from 'hooks/useAxiosPrivate';
-import apiRouter from 'utils/apiRouter';
-import useAuthHeader from 'hooks/useSessionToken';
 import { signOut } from 'next-auth/react';
-import routerConstants from 'utils/routerConstants';
+import useMounted from '../../../../hooks/useMounted';
+import useAxiosPrivate from '../../../../hooks/useAxiosPrivate';
+import useAuthHeader from '../../../../hooks/useSessionToken';
+import apiRouter from '../../../../utils/apiRouter';
+import toaster from '../../../../utils/toaster';
 
 
 const Profile = () => {
@@ -41,6 +40,7 @@ const Profile = () => {
             getUserDetails();
         }
     }, [hasMounted]);
+    
 
     return (
         <Row className="align-items-center justify-content-center g-0 min-vh-100">
